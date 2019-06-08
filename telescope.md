@@ -198,7 +198,7 @@ Telescope allows you to search entries by "tag". Often, tags are Eloquent model 
     {
         $this->hideSensitiveRequestDetails();
 
-        Telescope::tag(function (IncomingEntry $entry) {
+        Telescope::tags(function (IncomingEntry $entry) {
             if ($entry->type === 'request') {
                 return ['status:'.$entry->content['response_status']];
             }

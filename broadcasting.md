@@ -158,7 +158,7 @@ The `ShouldBroadcast` interface requires our event to define a `broadcastOn` met
     /**
      * Get the channels the event should broadcast on.
      *
-     * @return \Illuminate\Broadcasting\PrivateChannel
+     * @return array
      */
     public function broadcastOn()
     {

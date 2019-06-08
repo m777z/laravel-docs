@@ -59,11 +59,6 @@ In your `auth.php` configuration file, you may configure multiple "guards", whic
 
     use Illuminate\Support\Facades\Auth;
 
-    /**
-     * Get the guard to be used during password reset.
-     *
-     * @return StatefulGuard
-     */
     protected function guard()
     {
         return Auth::guard('guard-name');

@@ -2,7 +2,6 @@
 
 - [Introduction](#introduction)
 - [Installation](#installation)
-    - [Managing ChromeDriver Installations](#managing-chromedriver-installations)
     - [Using Other Browsers](#using-other-browsers)
 - [Getting Started](#getting-started)
     - [Generating Tests](#generating-tests)
@@ -68,21 +67,18 @@ If you had test failures the last time you ran the `dusk` command, you may save 
 
     php artisan dusk:fails
 
-<a name="managing-chromedriver-installations"></a>
-### Managing ChromeDriver Installations
+If you want to install a different version than the current provided ChromeDriver, then you may install that binary with the `dusk:chrome-driver` command
 
-If you would like to install a different version of ChromeDriver than what is included with Laravel Dusk, you may use the `dusk:chrome-driver` command:
-
-    # Install the latest version of ChromeDriver for your OS...
+    # Install the driver for the current OS to the latest version.
     php artisan dusk:chrome-driver
 
-    # Install a given version of ChromeDriver for your OS...
+    # Install the driver for the current OS to a specific version.
     php artisan dusk:chrome-driver 74
 
-    # Install a given version of ChromeDriver for all supported OSs...
+    # Install the driver for every OS to the latest version.
     php artisan dusk:chrome-driver --all
 
-> {note} Dusk requires the `chromedriver` binaries to be executable. If you're having problems running Dusk, you should ensure the binaries are executable using the following command: `chmod -R 0755 vendor/laravel/dusk/bin`.
+> {note} Dusk requires its `chromedriver` binaries to be executable. If you're having problems running Dusk, you can ensure the binaries are executable using the following command: `chmod -R 0755 vendor/laravel/dusk/bin`.
 
 <a name="using-other-browsers"></a>
 ### Using Other Browsers

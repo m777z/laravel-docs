@@ -1005,7 +1005,7 @@ You may not always need every column from the relationships you are retrieving. 
 
 #### Eager Loading By Default
 
-Sometimes you might want to always load some relationships when retrieving a model. To accomplish this, you may define a `$with` property on the model:
+Sometimes you might want to always load a relationship when retrieving a model. For this, you can use the `$with` property on your model. Example:
 
     <?php
 
@@ -1016,12 +1016,10 @@ Sometimes you might want to always load some relationships when retrieving a mod
     class Book extends Model
     {
         /**
-         * The relationships that should always be loaded.
-         *
-         * @var array
+         * Always load the related author when retrieving a book
          */
         protected $with = ['author'];
-
+        
         /**
          * Get the author that wrote the book.
          */
@@ -1031,9 +1029,9 @@ Sometimes you might want to always load some relationships when retrieving a mod
         }
     }
    
-If you would like to remove an item from the `$with` property for a single query, you may use the `without` method:
+If you would like to temporarily "undo" the `$with` property for a single query, you can use the Eloquent `without()` method:
 
-    $books = App\Book::without('author')->get();
+    $booksWithoutAuthors = App\Book::without('author')->get();
 
 <a name="constraining-eager-loads"></a>
 ### Constraining Eager Loads

@@ -62,7 +62,7 @@ In your `auth.php` configuration file, you may configure multiple "guards", whic
     /**
      * Get the guard to be used during password reset.
      *
-     * @return \Illuminate\Contracts\Auth\StatefulGuard
+     * @return StatefulGuard
      */
     protected function guard()
     {

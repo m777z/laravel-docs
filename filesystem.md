@@ -408,17 +408,7 @@ Next, you should create a [service provider](/docs/{{version}}/providers) such a
     class DropboxServiceProvider extends ServiceProvider
     {
         /**
-         * Register bindings in the container.
-         *
-         * @return void
-         */
-        public function register()
-        {
-            //
-        }
-
-        /**
-         * Bootstrap any application services.
+         * Perform post-registration booting of services.
          *
          * @return void
          */
@@ -431,6 +421,16 @@ Next, you should create a [service provider](/docs/{{version}}/providers) such a
 
                 return new Filesystem(new DropboxAdapter($client));
             });
+        }
+
+        /**
+         * Register bindings in the container.
+         *
+         * @return void
+         */
+        public function register()
+        {
+            //
         }
     }
 

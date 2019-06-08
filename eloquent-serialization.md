@@ -187,17 +187,7 @@ Laravel extends the [Carbon](https://github.com/briannesbitt/Carbon) date librar
     class AppServiceProvider extends ServiceProvider
     {
         /**
-         * Register bindings in the container.
-         *
-         * @return void
-         */
-        public function register()
-        {
-            //
-        }
-
-        /**
-         * Bootstrap any application services.
+         * Perform post-registration booting of services.
          *
          * @return void
          */
@@ -206,5 +196,15 @@ Laravel extends the [Carbon](https://github.com/briannesbitt/Carbon) date librar
             Carbon::serializeUsing(function ($carbon) {
                 return $carbon->format('U');
             });
+        }
+
+        /**
+         * Register bindings in the container.
+         *
+         * @return void
+         */
+        public function register()
+        {
+            //
         }
     }

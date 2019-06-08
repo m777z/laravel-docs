@@ -79,16 +79,6 @@ Occasionally, you may need to share a piece of data with all views that are rend
     class AppServiceProvider extends ServiceProvider
     {
         /**
-         * Register any application services.
-         *
-         * @return void
-         */
-        public function register()
-        {
-            //
-        }
-
-        /**
          * Bootstrap any application services.
          *
          * @return void
@@ -96,6 +86,16 @@ Occasionally, you may need to share a piece of data with all views that are rend
         public function boot()
         {
             View::share('key', 'value');
+        }
+
+        /**
+         * Register the service provider.
+         *
+         * @return void
+         */
+        public function register()
+        {
+            //
         }
     }
 
@@ -116,17 +116,7 @@ For this example, let's register the view composers within a [service provider](
     class ViewServiceProvider extends ServiceProvider
     {
         /**
-         * Register any application services.
-         *
-         * @return void
-         */
-        public function register()
-        {
-            //
-        }
-
-        /**
-         * Bootstrap any application services.
+         * Register bindings in the container.
          *
          * @return void
          */
@@ -141,6 +131,16 @@ For this example, let's register the view composers within a [service provider](
             View::composer('dashboard', function ($view) {
                 //
             });
+        }
+
+        /**
+         * Register the service provider.
+         *
+         * @return void
+         */
+        public function register()
+        {
+            //
         }
     }
 

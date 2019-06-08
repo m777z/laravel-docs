@@ -324,6 +324,16 @@ If you would like to disable the wrapping of the outer-most resource, you may us
     class AppServiceProvider extends ServiceProvider
     {
         /**
+         * Perform post-registration booting of services.
+         *
+         * @return void
+         */
+        public function boot()
+        {
+            Resource::withoutWrapping();
+        }
+
+        /**
          * Register bindings in the container.
          *
          * @return void
@@ -331,16 +341,6 @@ If you would like to disable the wrapping of the outer-most resource, you may us
         public function register()
         {
             //
-        }
-
-        /**
-         * Bootstrap any application services.
-         *
-         * @return void
-         */
-        public function boot()
-        {
-            Resource::withoutWrapping();
         }
     }
 

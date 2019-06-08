@@ -83,7 +83,7 @@ Homestead runs on any Windows, Mac, or Linux system, and includes the Nginx web 
 - avahi
 - ngrok
 - Xdebug
-- XHProf / Tideways / XHGui
+- xhprof / tideways / xhgui
 - wp-cli
 - Zend Z-Ray
 - Go
@@ -573,9 +573,9 @@ When debugging functional tests that make requests to the web server, it is ofte
     xdebug.remote_host = 192.168.10.1
     xdebug.remote_autostart = 1
 
-### Profiling PHP Performance with XHGui
+### Profiling PHP performance with xhgui
 
-[XHGui](https://www.github.com/perftools/xhgui) is a user interface for exploring the performance of your PHP programs. To enable XHGui, add `xhgui: 'true'` to your site configuration:
+[xhgui](https://www.github.com/perftools/xhgui) is a user interface for exploring the performance of your PHP programs. To enable xhgui, add `xhgui: 'true'` to your site configuration:
 
     sites:
         -
@@ -584,7 +584,7 @@ When debugging functional tests that make requests to the web server, it is ofte
             type: "apache"
             xhgui: 'true'
 
-To add XHGui to an existing site, run `vagrant provision`.
+To add xhgui to an existing site, run `vagrant provision`.
 
 To profile a web request, add `xhgui=on` as a query parameter to a request. A cookie will be set with a 1 hour expiry from the last request to make it easy to profile AJAX and POST requests from a browser. View the results by browsing to `/xhgui` on your site.
 

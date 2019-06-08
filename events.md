@@ -360,12 +360,12 @@ Event subscribers are classes that may subscribe to multiple events from within 
         /**
          * Handle user login events.
          */
-        public function handleUserLogin($event) {}
+        public function onUserLogin($event) {}
 
         /**
          * Handle user logout events.
          */
-        public function handleUserLogout($event) {}
+        public function onUserLogout($event) {}
 
         /**
          * Register the listeners for the subscriber.
@@ -376,12 +376,12 @@ Event subscribers are classes that may subscribe to multiple events from within 
         {
             $events->listen(
                 'Illuminate\Auth\Events\Login',
-                'App\Listeners\UserEventSubscriber@handleUserLogin'
+                'App\Listeners\UserEventSubscriber@onUserLogin'
             );
 
             $events->listen(
                 'Illuminate\Auth\Events\Logout',
-                'App\Listeners\UserEventSubscriber@handleUserLogout'
+                'App\Listeners\UserEventSubscriber@onUserLogout'
             );
         }
     }

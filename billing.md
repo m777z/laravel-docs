@@ -8,7 +8,6 @@
     - [Billable Model](#billable-model)
     - [API Keys](#api-keys)
     - [Currency Configuration](#currency-configuration)
-    - [Webhooks](#webhooks)
 - [Subscriptions](#subscriptions)
     - [Creating Subscriptions](#creating-subscriptions)
     - [Checking Subscription Status](#checking-subscription-status)
@@ -124,11 +123,6 @@ The default Cashier currency is United States Dollars (USD). You can change the 
     use Laravel\Cashier\Cashier;
 
     Cashier::useCurrency('eur', '€');
-
-<a name="webhooks"></a>
-### Webhooks
-
-To make sure Cashier properly handles all Stripe events and data is kept in sync, we recommend [setting up Cashier's webhooks](#handling-stripe-webhooks).
 
 <a name="subscriptions"></a>
 ## Subscriptions

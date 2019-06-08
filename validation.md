@@ -560,7 +560,6 @@ Below is a list of all available validation rules and their function:
 [Dimensions (Image Files)](#rule-dimensions)
 [Distinct](#rule-distinct)
 [E-Mail](#rule-email)
-[Ends With](#rule-ends-with)
 [Exists (Database)](#rule-exists)
 [File](#rule-file)
 [Filled](#rule-filled)
@@ -744,11 +743,6 @@ When working with arrays, the field under validation must not have any duplicate
 #### email
 
 The field under validation must be formatted as an e-mail address.
-
-<a name="rule-ends-with"></a>
-#### ends_with:_foo_,_bar_,...
-
-The field under validation must end with one of the given values.
 
 <a name="rule-exists"></a>
 #### exists:_table_,_column_

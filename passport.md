@@ -530,7 +530,7 @@ When authenticating using the password grant, Passport will use the `password` a
         */
         public function validateForPassportPasswordGrant($password)
         {
-            return Hash::check($password, $this->password);
+            return Hash::check($password, $user->password);
         }
     }
 

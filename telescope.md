@@ -10,7 +10,7 @@
     - [Entries](#filtering-entries)
     - [Batches](#filtering-batches)
 - [Tagging](#tagging)
-    - [Adding custom tags](#adding-custom-tags)
+    - [Adding custom tags](#tagging-adding)
 - [Available Watchers](#available-watchers)
     - [Cache Watcher](#cache-watcher)
     - [Command Watcher](#command-watcher)

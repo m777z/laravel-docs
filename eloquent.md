@@ -877,16 +877,6 @@ To register an observer, use the `observe` method on the model you wish to obser
     class AppServiceProvider extends ServiceProvider
     {
         /**
-         * Register the service provider.
-         *
-         * @return void
-         */
-        public function register()
-        {
-            //
-        }
-
-        /**
          * Bootstrap any application services.
          *
          * @return void
@@ -894,5 +884,15 @@ To register an observer, use the `observe` method on the model you wish to obser
         public function boot()
         {
             User::observe(UserObserver::class);
+        }
+
+        /**
+         * Register the service provider.
+         *
+         * @return void
+         */
+        public function register()
+        {
+            //
         }
     }
